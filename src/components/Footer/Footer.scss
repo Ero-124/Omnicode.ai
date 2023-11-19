@@ -1,0 +1,137 @@
+.footer {
+  padding: 149px 0 0 20px;
+  background: #232323;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #4f4f4f;
+    padding-bottom: 59px;
+    .footer__social {
+      .footer__logo {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 21px;
+      }
+      .social__links {
+        display: flex;
+
+        li {
+          margin-right: 24px;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            width: 32px;
+            height: 32px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+
+    .footer__navigation {
+      .navigation__list {
+        display: flex;
+        margin-bottom: 29px;
+
+        li {
+          margin-right: 50px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          /* ete baceq commenty dzer tvac dizaynov klini linkeri heravorutyunnery */
+          /*  &:nth-child(1) {
+            margin-right: 110px;
+          }
+          &:nth-child(2) {
+            margin-right: 62px;
+          } */
+        }
+
+        a {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 183.333%;
+          letter-spacing: -0.96px;
+        }
+      }
+      strong {
+        display: block;
+        text-align: right;
+        margin-right: 15px;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: Montserrat;
+      }
+    }
+  }
+
+  .footer__copyright {
+    display: block;
+    padding: 36px 0 20px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .footer__wrapper .footer__navigation .navigation__list a {
+    transition: 0.3s ease;
+    &:hover {
+      color: violet;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 0 20px;
+  }
+  .footer .footer__wrapper .footer__social .footer__logo,
+  .footer .footer__wrapper .footer__navigation .navigation__list a {
+    font-size: 20px;
+  }
+  .footer
+    .footer__wrapper
+    .footer__navigation
+    .navigation__list
+    li:nth-child(2),
+  .footer
+    .footer__wrapper
+    .footer__navigation
+    .navigation__list
+    li:nth-child(1) {
+    margin-right: 30px;
+  }
+  .footer .footer__wrapper .footer__navigation .navigation__list {
+    margin-bottom: 10px;
+  }
+  .footer .footer__wrapper {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 572px) {
+  .footer .footer__wrapper {
+    flex-direction: column-reverse;
+    padding-bottom: 30px;
+  }
+  .footer .footer__wrapper .footer__navigation strong {
+    text-align: left;
+    margin: 0 0 40px 0;
+  }
+}

@@ -1,0 +1,102 @@
+.brain-section {
+  background: #111;
+  padding-top: 168px;
+  .brain-section__wrapper {
+    display: flex;
+    align-items: center;
+    .brain-section__logo {
+      position: relative;
+      svg {
+        width: 629px;
+        height: 629px;
+        path {
+          opacity: 0.3;
+          fill: #232323;
+        }
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 44%;
+        transform: translate(-50%, -50%);
+        font-size: 126.478px;
+        font-weight: 600;
+        line-height: 187.5%;
+        opacity: 0.05;
+        color: #fff;
+      }
+    }
+    .brain-section__content {
+      max-width: 859px;
+      color: #fff;
+      .content__title {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 187.5%;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 25px;
+
+        a {
+          color: #00f0ff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .brain-section .brain-section__wrapper .brain-section__logo svg {
+    width: 420px;
+    height: 420px;
+  }
+  .brain-section .brain-section__wrapper .brain-section__logo span {
+    font-size: 80px;
+  }
+  .brain-section
+    .brain-section__wrapper
+    .brain-section__content
+    .content__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .brain-section {
+    padding-top: 50px;
+  }
+  .brain-section .brain-section__wrapper .brain-section__logo {
+    display: none;
+  }
+  .brain-section .brain-section__wrapper .brain-section__content {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+  .brain-section
+    .brain-section__wrapper
+    .brain-section__content
+    .content__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .brain-section
+    .brain-section__wrapper
+    .brain-section__content
+    .content__title {
+    font-size: 25px;
+  }
+
+  .brain-section .brain-section__wrapper .brain-section__content p {
+    font-size: 14px;
+  }
+  .brain-section .brain-section__wrapper .brain-section__content {
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+  }
+}

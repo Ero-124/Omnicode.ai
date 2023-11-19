@@ -1,0 +1,106 @@
+.how-it-works {
+  padding: 79px 0 139px 0;
+  background: #232323;
+  position: relative;
+  z-index: 1;
+  /*  &::after {
+    content: "";
+    position: absolute;
+    bottom: -300px;
+    left: 250px;
+    width: 776px;
+    height: 776px;
+    border-radius: 776px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #ff2df7 0%,
+      rgba(1, 0, 255, 0) 92.71%
+    );
+  } */
+  .how-it-works__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    .how-it-works__columns {
+      max-width: 386px;
+      .how-it-works__item {
+        .item__number {
+          font-size: 110.118px;
+          font-weight: 600;
+          line-height: 187.5%;
+          margin-right: 29px;
+          opacity: 0.15;
+        }
+        .item__radius {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          &.violet {
+            background-color: #7041ea;
+          }
+          &.blue {
+            background-color: #00f0ff;
+          }
+          &.pink {
+            background-color: #ff2df7;
+          }
+        }
+        .item__title,
+        .item__desc {
+          font-weight: 400;
+        }
+        .item__title {
+          font-size: 24px;
+          line-height: 116.667%;
+          margin-bottom: 36px;
+        }
+        .item__desc {
+          font-size: 16px;
+          font-family: Montserrat;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .how-it-works
+    .how-it-works__wrapper
+    .how-it-works__columns
+    .how-it-works__item
+    .item__number {
+    font-size: 90px;
+  }
+  .how-it-works
+    .how-it-works__wrapper
+    .how-it-works__columns
+    .how-it-works__item
+    .item__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .how-it-works .how-it-works__wrapper {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .how-it-works .how-it-works__wrapper .how-it-works__columns {
+    flex: 0 1 48%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works .how-it-works__wrapper .how-it-works__columns {
+    flex: 0 1 100%;
+  }
+  .how-it-works {
+    padding: 30px 0 50px 0;
+  }
+}

@@ -1,0 +1,124 @@
+.header {
+  background: #232323;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1920px;
+  height: 80px;
+  z-index: 10000;
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+    .header__logo {
+      color: #fff;
+      font-size: 24px;
+    }
+    .header__burger {
+      display: none;
+      position: relative;
+      z-index: 100;
+    }
+    .navbar {
+      .navbar__items {
+        display: flex;
+        align-items: center;
+        .navbar__item {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          /* ete baceq commenty dzer tvac dizaynov klini linkeri heravorutyunnery */
+
+          /*  &:first-child {
+            margin-right: 119px;
+          }
+          &:nth-child(2) {
+            margin-right: 67px;
+          } */
+
+          .navbar__link {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar__link {
+    position: relative;
+    &:before {
+      background: #fff;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+    &:hover {
+      &:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    transition: 0.3s ease;
+    background: #24c6dc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #514a9d,
+      #24c6dc
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #514a9d,
+      #24c6dc
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    z-index: 10;
+    .navbar__items {
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      .navbar__item {
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+      }
+    }
+    &.active {
+      right: 0;
+    }
+  }
+  .header .header__wrapper .navbar .navbar__items .navbar__item .navbar__link {
+    font-size: 25px;
+  }
+  .header .header__wrapper .header__burger {
+    display: flex;
+    height: 80px;
+    align-items: center;
+  }
+}
